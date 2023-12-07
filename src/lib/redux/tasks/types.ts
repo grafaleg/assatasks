@@ -1,3 +1,3 @@
 export interface Tasks {
-  value: string[];
+  items: string[];
 }

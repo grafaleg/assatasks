@@ -23,9 +23,17 @@ export const styles = StyleSheet.create({
  * @returns {JSX.Element} - The rendered touchable button component.
  */
 
-export default function Button({children, onPress}: Readonly<ButtonProps>) {
+export default function Button({
+  children,
+  onPress,
+  ...props
+}: Readonly<ButtonProps>) {
   return (
-    <TouchableOpacity testID="button" style={styles.button} onPress={onPress}>
+    <TouchableOpacity
+      testID="button"
+      style={styles.button}
+      onPress={onPress}
+      {...props}>
       <Typography testID="buttonText">{children}</Typography>
     </TouchableOpacity>
   );

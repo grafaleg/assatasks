@@ -19,8 +19,12 @@ export default function Home() {
   const {navigate} = useNavigation<ScreenStackNavigationProps>();
   return (
     <View style={styles.container}>
-      <Button onPress={() => navigate('Tasks')}>Tasks</Button>
-      <Button onPress={() => navigate('List')}>List</Button>
+      <Button testID="tasksButton" onPress={() => navigate('Tasks')}>
+        Tasks
+      </Button>
+      <Button testID="listButton" onPress={() => navigate('List')}>
+        List
+      </Button>
     </View>
   );
 }
